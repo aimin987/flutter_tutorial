@@ -4,7 +4,7 @@
  * Description: State/路由 练习
  * -----
  * Created  By: Aim 2020-02-18 13:35:38
- * Modified By: Aim 2020-02-18 15:58:46
+ * Modified By: Aim 2020-02-18 17:21:50
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -19,9 +19,19 @@ class Counter extends StatelessWidget {
     return new MaterialApp(
       title: '计数器',
       theme: new ThemeData(primaryColor: Colors.blue),
-      home: new Home(
-        title: '计数器标题',
-      ),
+      routes: {
+        '/': (context) => Home(
+              title: '首页',
+            ),
+        'new_page': (context) => NewRoute(),
+        'tip_page': (context) => TipRoute(text: '注册路由',)
+      },
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(builder: (context){
+          String routeName = settings.name;
+          // 实现登录中间件
+        });
+      },
     );
   }
 }
@@ -60,13 +70,23 @@ class HomeState extends State<Home> {
               style: Theme.of(context).textTheme.headline6,
             ),
             new FlatButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      new MaterialPageRoute(builder: (context) {
-                    return NewRoute();
-                  }));
+              onPressed: () {
+                Navigator.pushNamed(context, 'new_page');
+              },
+              child: Text("Open New Route"),
+              textColor: Colors.blue,
+            ),
+            new FlatButton(
+                onPressed: () async {
+                  // var result = await Navigator.push(context, MaterialPageRoute(
+                  //   builder: (context) {
+                  //     return TipRoute(text: '我是提示路由');
+                  //   },
+                  // ));
+                  var result = await Navigator.pushNamed(context, 'tip_page', arguments: 'HI');
+                  print('路由返回值: $result');
                 },
-                child: Text("Open New Route"))
+                child: Text('打开提示页'))
           ],
         ),
       ),
@@ -89,6 +109,40 @@ class NewRoute extends StatelessWidget {
       ),
       body: Center(
         child: Text('This is new route'),
+      ),
+    );
+  }
+}
+
+// 路由传值
+
+class TipRoute extends StatelessWidget {
+  TipRoute({Key key, @required this.text}) : super(key: key);
+
+  final String text;
+  
+
+  @override
+  Widget build(BuildContext context) {
+    var args = ModalRoute.of(context).settings.arguments;
+    print(args);
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("提示"),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(18),
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Text(text),
+              RaisedButton(
+                onPressed: () => Navigator.pop(context, '我是返回值'),
+                child: Text('返回'),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
