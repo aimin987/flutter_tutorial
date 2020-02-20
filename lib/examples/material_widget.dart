@@ -4,7 +4,7 @@
  * Description: 使用 Material 组件
  * -----
  * Created  By: Aim 2020-02-18 10:58:27
- * Modified By: Aim 2020-02-18 11:12:51
+ * Modified By: Aim 2020-02-20 16:51:56
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -13,6 +13,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/examples/text.dart';
 
 class MaterialWidget extends StatelessWidget {
   @override
@@ -25,9 +26,7 @@ class MaterialWidget extends StatelessWidget {
           new IconButton(icon: new Icon(Icons.search), onPressed: null)
         ],
       ),
-      body: new Center(
-        child: new Text('Hello world'),
-      ),
+      body: new TextWidget(),
 
       floatingActionButton: new FloatingActionButton(
         child: new Icon(Icons.add),
