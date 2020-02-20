@@ -4,7 +4,7 @@
  * Description: State/路由 练习
  * -----
  * Created  By: Aim 2020-02-18 13:35:38
- * Modified By: Aim 2020-02-18 17:21:50
+ * Modified By: Aim 2020-02-20 14:38:53
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -28,7 +28,7 @@ class Counter extends StatelessWidget {
       },
       onGenerateRoute: (settings) {
         return MaterialPageRoute(builder: (context){
-          String routeName = settings.name;
+          // String routeName = settings.name;
           // 实现登录中间件
         });
       },
