@@ -3,6 +3,7 @@ import 'package:flutter_tutorial/examples/counter.dart';
 import 'package:flutter_tutorial/examples/material_widget.dart';
 import 'package:flutter_tutorial/examples/state.dart';
 import 'package:flutter_tutorial/examples/switch_checkbox.dart';
+import 'package:flutter_tutorial/examples/textfield_form.dart';
 // import 'package:flutter_tutorial/examples/hello_world.dart';
 // import 'package:flutter_tutorial/examples/material_widget.dart';
 
@@ -15,7 +16,8 @@ class Test extends StatelessWidget {
       title: '测试',
       routes: {
         '/': (context) => HomeRoute(),
-        'switch_checkbox': (context) => SwitchAndCheckBoxRoute()
+        'switch_checkbox': (context) => SwitchAndCheckBoxRoute(),
+        'textfield_form': (context) => TextFieldAndForm()
       },
     );
   }
@@ -35,7 +37,12 @@ class HomeRoute extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, 'switch_checkbox');
               },
-              child: Text('单选、复选框'))
+              child: Text('单选、复选框')),
+          FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, 'textfield_form');
+              },
+              child: Text('输入框及表单'))
         ],
       ),
     );
