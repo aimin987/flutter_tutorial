@@ -5,6 +5,7 @@ import 'package:flutter_tutorial/examples/row_column.dart';
 import 'package:flutter_tutorial/examples/state.dart';
 import 'package:flutter_tutorial/examples/switch_checkbox.dart';
 import 'package:flutter_tutorial/examples/textfield_form.dart';
+import 'package:flutter_tutorial/examples/warp_flow.dart';
 // import 'package:flutter_tutorial/examples/hello_world.dart';
 // import 'package:flutter_tutorial/examples/material_widget.dart';
 
@@ -19,7 +20,8 @@ class Test extends StatelessWidget {
         '/': (context) => HomeRoute(),
         'switch_checkbox': (context) => SwitchAndCheckBoxRoute(),
         'textfield_form': (context) => TextFieldAndForm(),
-        'row_column': (context) => RowAndColumn()
+        'row_column': (context) => RowAndColumn(),
+        'wrap_flow': (context) => WarpAndFlowLayout()
       },
     );
   }
@@ -46,9 +48,15 @@ class HomeRoute extends StatelessWidget {
               },
               child: Text('输入框及表单')),
           FlatButton(
-            onPressed: () {
-              Navigator.pushNamed(context, 'row_column');
-          }, child: Text('线性布局'))
+              onPressed: () {
+                Navigator.pushNamed(context, 'row_column');
+              },
+              child: Text('线性布局')),
+          FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, 'wrap_flow');
+              },
+              child: Text('流式布局'))
         ],
       ),
     );

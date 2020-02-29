@@ -4,7 +4,7 @@
  * Description: 
  * -----
  * Created  By: Aim 2020-02-17 22:10:41
- * Modified By: Aim 2020-02-18 10:27:38
+ * Modified By: Aim 2020-02-29 21:56:10
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -22,7 +22,7 @@ class HelloWorld extends StatelessWidget {
           new MyAppBar(
               title: new Text(
             'Example title',
-            style: Theme.of(context).primaryTextTheme.headline6,
+            style: Theme.of(context).primaryTextTheme.title,
           )),
           new Expanded(
               child: new Center(

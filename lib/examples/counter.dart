@@ -4,7 +4,7 @@
  * Description: State/路由 练习
  * -----
  * Created  By: Aim 2020-02-18 13:35:38
- * Modified By: Aim 2020-02-20 14:38:53
+ * Modified By: Aim 2020-02-29 21:55:54
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -67,7 +67,7 @@ class HomeState extends State<Home> {
             new Text('You have pushed the button this many times:'),
             new Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.display4,
             ),
             new FlatButton(
               onPressed: () {
