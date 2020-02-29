@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/examples/counter.dart';
 import 'package:flutter_tutorial/examples/material_widget.dart';
+import 'package:flutter_tutorial/examples/row_column.dart';
 import 'package:flutter_tutorial/examples/state.dart';
 import 'package:flutter_tutorial/examples/switch_checkbox.dart';
 import 'package:flutter_tutorial/examples/textfield_form.dart';
@@ -17,7 +18,8 @@ class Test extends StatelessWidget {
       routes: {
         '/': (context) => HomeRoute(),
         'switch_checkbox': (context) => SwitchAndCheckBoxRoute(),
-        'textfield_form': (context) => TextFieldAndForm()
+        'textfield_form': (context) => TextFieldAndForm(),
+        'row_column': (context) => RowAndColumn()
       },
     );
   }
@@ -42,7 +44,11 @@ class HomeRoute extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, 'textfield_form');
               },
-              child: Text('输入框及表单'))
+              child: Text('输入框及表单')),
+          FlatButton(
+            onPressed: () {
+              Navigator.pushNamed(context, 'row_column');
+          }, child: Text('线性布局'))
         ],
       ),
     );
