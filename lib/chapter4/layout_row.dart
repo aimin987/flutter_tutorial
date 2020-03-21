@@ -1,19 +1,20 @@
 /*
- * File: row_column.dart
+ * File: row.dart
  * -----
- * Description:  线性布局
+ * Description: 行布局
  * -----
- * Created  By: Aim 2020-02-29 16:28:58
- * Modified By: Aim 2020-03-21 22:41:32
+ * Created  By: Aim 2020-03-21 22:50:11
+ * Modified By: Aim 2020-03-21 23:13:26
  * -----
  * HISTORY:
  * Date      	By	Comments
  * ----------	---	----------------------------------------------------------
  */
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class RowAndColumn extends StatelessWidget {
+class Layout_Row extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
