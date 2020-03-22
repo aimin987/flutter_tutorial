@@ -4,7 +4,7 @@
  * Description: 布局练习
  * -----
  * Created  By: Aim 2020-03-21 22:50:57
- * Modified By: Aim 2020-03-21 23:23:21
+ * Modified By: Aim 2020-03-22 22:42:08
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -13,6 +13,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/chapter4/layout_column.dart';
 import 'package:flutter_tutorial/chapter4/layout_row.dart';
 
 class Chapter4 extends StatelessWidget {
@@ -22,17 +23,28 @@ class Chapter4 extends StatelessWidget {
       appBar: AppBar(
         title: Text('第四章:布局类组件'),
       ),
-      body: Column(
-        children: <Widget>[
-          OutlineButton(
-            child: Text("Row"),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Layout_Row();
-              }));
-            },
-          )
-        ],
+      body: ConstrainedBox(
+        constraints: BoxConstraints(minWidth: double.infinity),
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text("线性布局-Row"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Layout_Row();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("线性布局-Column"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Layout_Column();
+                }));
+              },
+            )
+          ],
+        ),
       ),
     );
   }
