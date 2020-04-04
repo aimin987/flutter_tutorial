@@ -17,6 +17,7 @@ import 'package:flutter_tutorial/chapter4/layout_column.dart';
 import 'package:flutter_tutorial/chapter4/layout_flex.dart';
 import 'package:flutter_tutorial/chapter4/layout_flow.dart';
 import 'package:flutter_tutorial/chapter4/layout_row.dart';
+import 'package:flutter_tutorial/chapter4/layout_stack_positioned.dart';
 import 'package:flutter_tutorial/chapter4/layout_wrap.dart';
 
 class Chapter4 extends StatelessWidget {
@@ -66,7 +67,14 @@ class Chapter4 extends StatelessWidget {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return LayoutFlow();
                   }));
-                })
+                }),
+            FlatButton(
+                child: Text("层叠布局-Stack,Positioned"),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return LayoutStackPositioned();
+                  }));
+                }),
           ],
         ),
       ),
