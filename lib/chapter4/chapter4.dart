@@ -4,7 +4,7 @@
  * Description: 布局练习
  * -----
  * Created  By: Aim 2020-03-21 22:50:57
- * Modified By: Aim 2020-03-29 20:36:17
+ * Modified By: Aim 2020-04-05 22:13:44
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -13,6 +13,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/chapter4/layout_align.dart';
 import 'package:flutter_tutorial/chapter4/layout_column.dart';
 import 'package:flutter_tutorial/chapter4/layout_flex.dart';
 import 'package:flutter_tutorial/chapter4/layout_flow.dart';
@@ -73,6 +74,13 @@ class Chapter4 extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return LayoutStackPositioned();
+                  }));
+                }),
+            FlatButton(
+                child: Text("对齐与相对定位-Align"),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return LayoutAligin();
                   }));
                 }),
           ],
