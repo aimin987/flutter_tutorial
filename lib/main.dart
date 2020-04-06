@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_tutorial/chapter4/chapter4.dart';
+import 'package:flutter_tutorial/chapter5/chapter5.dart';
 
 void main() => runApp(Test());
 
@@ -15,7 +16,8 @@ class Test extends StatelessWidget {
         // 'textfield_form': (context) => TextFieldAndForm(),
         // 'row_column': (context) => RowAndColumn(),
         // 'wrap_flow': (context) => WarpAndFlowLayout()
-        'chapter4': (context) => Chapter4()
+        'chapter4': (context) => Chapter4(),
+        'chapter5': (context) => Chapter5()
       },
     );
   }
@@ -37,7 +39,12 @@ class HomeRoute extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, 'chapter4');
                     },
-                    child: Text('第四章:布局组件')),
+                    child: Text('第四章：布局类组件')),
+                FlatButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'chapter5');
+                    },
+                    child: Text('第五章：容器类组件')),
               ],
             )));
   }
