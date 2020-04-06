@@ -15,6 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/chapter5/container_decoratedbox.dart';
 import 'package:flutter_tutorial/chapter5/container_padding.dart';
 import 'package:flutter_tutorial/chapter5/container_sized.dart';
+import 'package:flutter_tutorial/chapter5/container_transform.dart';
 
 class Chapter5 extends StatelessWidget {
   const Chapter5({Key key}) : super(key: key);
@@ -50,6 +51,14 @@ class Chapter5 extends StatelessWidget {
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return ContainerDecoratedBox();
+                }));
+              },
+            ),
+             FlatButton(
+              child: Text("5.4 变换（Transform）"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ContainerTransform();
                 }));
               },
             ),
