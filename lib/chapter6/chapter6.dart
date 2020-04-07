@@ -4,7 +4,7 @@
  * Description: 第六章 可滚动组件
  * -----
  * Created  By: Aim 2020-04-07 15:47:14
- * Modified By: Aim 2020-04-07 16:06:19
+ * Modified By: Aim 2020-04-07 17:53:14
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -12,6 +12,7 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/chapter6/scroll_listview.dart';
 import 'package:flutter_tutorial/chapter6/scroll_singlechild.dart';
 
 class Chapter6 extends StatelessWidget {
@@ -35,7 +36,14 @@ class Chapter6 extends StatelessWidget {
                 }));
               },
             ),
-            
+            FlatButton(
+              child: Text("6.3 ListView"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ScrollListView();
+                }));
+              },
+            ),
           ],
         ),
       ),
