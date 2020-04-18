@@ -4,7 +4,7 @@
  * Description: 第7章 功能型组件
  * -----
  * Created  By: Aim 2020-04-08 17:44:24
- * Modified By: Aim 2020-04-18 17:26:10
+ * Modified By: Aim 2020-04-18 20:17:28
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -12,6 +12,7 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/chapter7/func_future.dart';
 import 'package:flutter_tutorial/chapter7/func_inherited.dart';
 import 'package:flutter_tutorial/chapter7/func_provider.dart';
 import 'package:flutter_tutorial/chapter7/func_theme.dart';
@@ -67,6 +68,14 @@ class Chapter7 extends StatelessWidget {
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return FuncTheme();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("7.5 异步UI更新"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return FuncFuture();
                 }));
               },
             ),
