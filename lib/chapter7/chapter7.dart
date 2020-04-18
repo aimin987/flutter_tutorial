@@ -4,7 +4,7 @@
  * Description: 第7章 功能型组件
  * -----
  * Created  By: Aim 2020-04-08 17:44:24
- * Modified By: Aim 2020-04-17 15:48:38
+ * Modified By: Aim 2020-04-18 17:26:10
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -14,10 +14,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/chapter7/func_inherited.dart';
 import 'package:flutter_tutorial/chapter7/func_provider.dart';
+import 'package:flutter_tutorial/chapter7/func_theme.dart';
 import 'package:flutter_tutorial/chapter7/func_willpopscope.dart';
 import 'package:flutter_tutorial/chapter7/provider/Counter.dart';
 import 'package:provider/provider.dart';
-
 
 class Chapter7 extends StatelessWidget {
   const Chapter7({Key key}) : super(key: key);
@@ -59,6 +59,14 @@ class Chapter7 extends StatelessWidget {
                   ], child: FuncProvider());
 
                   // FuncProvider();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("7.4 颜色和主题"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return FuncTheme();
                 }));
               },
             ),
