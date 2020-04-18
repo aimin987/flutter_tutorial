@@ -4,7 +4,7 @@
  * Description: 第7章 功能型组件
  * -----
  * Created  By: Aim 2020-04-08 17:44:24
- * Modified By: Aim 2020-04-18 20:17:28
+ * Modified By: Aim 2020-04-18 21:22:21
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -12,6 +12,7 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/chapter7/func_dialog.dart';
 import 'package:flutter_tutorial/chapter7/func_future.dart';
 import 'package:flutter_tutorial/chapter7/func_inherited.dart';
 import 'package:flutter_tutorial/chapter7/func_provider.dart';
@@ -76,6 +77,14 @@ class Chapter7 extends StatelessWidget {
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return FuncFuture();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("7.6 对话框详解"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return FuncDialog();
                 }));
               },
             ),
