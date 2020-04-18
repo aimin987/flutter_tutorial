@@ -4,6 +4,9 @@ import 'package:flutter_tutorial/chapter4/chapter4.dart';
 import 'package:flutter_tutorial/chapter5/chapter5.dart';
 import 'package:flutter_tutorial/chapter6/chapter6.dart';
 import 'package:flutter_tutorial/chapter7/chapter7.dart';
+import 'package:flutter_tutorial/chapter8/chapter8.1.dart';
+
+import 'chapter8/chapter8.dart';
 
 void main() => runApp(Test());
 
@@ -22,6 +25,8 @@ class Test extends StatelessWidget {
         'chapter5': (context) => Chapter5(),
         'chapter6': (context) => Chapter6(),
         'chapter7': (context) => Chapter7(),
+        'chapter8': (context) => Chapter8(),
+        'chapter8.1': (context) => Chapter8_1()
       },
     );
   }
@@ -59,6 +64,11 @@ class HomeRoute extends StatelessWidget {
                       Navigator.pushNamed(context, 'chapter7');
                     },
                     child: Text('第七章：功能型组件')),
+                FlatButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'chapter8');
+                    },
+                    child: Text('第八章 事件处理与通知')),
               ],
             )));
   }
