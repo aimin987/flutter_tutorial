@@ -4,7 +4,7 @@
  * Description: 8.1 原始指针事件处理
  * -----
  * Created  By: Aim 2020-04-19 10:28:33
- * Modified By: Aim 2020-04-19 20:13:27
+ * Modified By: Aim 2020-04-19 20:20:14
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -13,14 +13,14 @@
 
 import 'package:flutter/material.dart';
 
-class Chapter8_1 extends StatefulWidget {
-  const Chapter8_1({Key key}) : super(key: key);
+class Chapter81 extends StatefulWidget {
+  const Chapter81({Key key}) : super(key: key);
 
   @override
-  _Chapter8_1State createState() => _Chapter8_1State();
+  _Chapter81State createState() => _Chapter81State();
 }
 
-class _Chapter8_1State extends State<Chapter8_1> {
+class _Chapter81State extends State<Chapter81> {
   PointerEvent _event;
 
   @override

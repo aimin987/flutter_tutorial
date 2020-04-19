@@ -4,7 +4,7 @@
  * Description: 事件处理与通知
  * -----
  * Created  By: Aim 2020-04-19 10:28:33
- * Modified By: Aim 2020-04-19 17:07:55
+ * Modified By: Aim 2020-04-19 20:26:15
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -18,7 +18,8 @@ class Chapter8 extends StatelessWidget {
   // const Chapter8({Key key}) : super(key: key);
 
   final List<String> _titles = [
-    '8.1：原始指针事件处理'
+    '8.1：原始指针事件处理',
+    '8.2 手势识别'
   ];
 
   @override
