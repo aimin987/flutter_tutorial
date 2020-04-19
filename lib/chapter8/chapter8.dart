@@ -1,3 +1,17 @@
+/*
+ * File: chapter8.dart
+ * -----
+ * Description: 事件处理与通知
+ * -----
+ * Created  By: Aim 2020-04-19 10:28:33
+ * Modified By: Aim 2020-04-19 17:07:55
+ * -----
+ * HISTORY:
+ * Date      	By	Comments
+ * ----------	---	----------------------------------------------------------
+ */
+
+
 import 'package:flutter/material.dart';
 
 class Chapter8 extends StatelessWidget {
