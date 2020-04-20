@@ -6,6 +6,8 @@ import 'package:flutter_tutorial/chapter6/chapter6.dart';
 import 'package:flutter_tutorial/chapter7/chapter7.dart';
 import 'package:flutter_tutorial/chapter8/chapter8.1.dart';
 import 'package:flutter_tutorial/chapter8/chapter8.2.dart';
+import 'package:flutter_tutorial/chapter8/chapter8.3.dart';
+import 'package:flutter_tutorial/chapter8/chapter8.4.dart';
 
 import 'chapter8/chapter8.dart';
 
@@ -29,6 +31,8 @@ class Test extends StatelessWidget {
         'chapter8': (context) => Chapter8(),
         'chapter8.1': (context) => Chapter81(),
         'chapter8.2': (context) => Chapter82(),
+        'chapter8.3': (context) => Chapter83(),
+        'chapter8.4': (context) => Chapter84(),
       },
     );
   }

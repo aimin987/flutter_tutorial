@@ -4,13 +4,12 @@
  * Description: 事件处理与通知
  * -----
  * Created  By: Aim 2020-04-19 10:28:33
- * Modified By: Aim 2020-04-19 20:26:15
+ * Modified By: Aim 2020-04-20 13:42:32
  * -----
  * HISTORY:
  * Date      	By	Comments
  * ----------	---	----------------------------------------------------------
  */
-
 
 import 'package:flutter/material.dart';
 
@@ -19,7 +18,9 @@ class Chapter8 extends StatelessWidget {
 
   final List<String> _titles = [
     '8.1：原始指针事件处理',
-    '8.2 手势识别'
+    '8.2 手势识别',
+    '8.3 事件总线',
+    '8.4 Notification',
   ];
 
   @override
@@ -34,7 +35,8 @@ class Chapter8 extends StatelessWidget {
           return ListTile(
             title: Text(_titles[index]),
             onTap: () {
-              Navigator.of(context).pushNamed('chapter8.${index + 1}', arguments: _titles[index]);
+              Navigator.of(context).pushNamed('chapter8.${index + 1}',
+                  arguments: _titles[index]);
             },
           );
         },
