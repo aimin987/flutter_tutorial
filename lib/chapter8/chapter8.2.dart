@@ -4,13 +4,14 @@
  * Description: 8.2 手势识别
  * -----
  * Created  By: Aim 2020-04-19 20:17:34
- * Modified By: Aim 2020-04-19 22:20:09
+ * Modified By: Aim 2020-04-20 10:00:57
  * -----
  * HISTORY:
  * Date      	By	Comments
  * ----------	---	----------------------------------------------------------
  */
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class Chapter82 extends StatefulWidget {
@@ -25,6 +26,15 @@ class _Chapter82State extends State<Chapter82> {
   double _top = 0.0;
   double _left = 0.0;
   double _width = 200.0;
+
+  TapGestureRecognizer _tapGestureRecognizer = new TapGestureRecognizer();
+  bool _toggle = false;
+
+  @override
+  void dispose() {
+    _tapGestureRecognizer.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,18 +87,38 @@ class _Chapter82State extends State<Chapter82> {
       //   ],
       // ),
 
+      // body: Center(
+      //   child: GestureDetector(
+      //     child: Image.asset(
+      //       'images/avatar.png',
+      //       width: _width,
+      //     ),
+      //     onScaleUpdate: (ScaleUpdateDetails details) {
+      //       setState(() {
+      //         _width = 200 * details.scale.clamp(.8, 10.0);
+      //       });
+      //     },
+      //   ),
+      // ),
+
       body: Center(
-        child: GestureDetector(
-          child: Image.asset(
-            'images/avatar.png',
-            width: _width,
-          ),
-          onScaleUpdate: (ScaleUpdateDetails details) {
-            setState(() {
-              _width = 200 * details.scale.clamp(.8, 10.0);
-            });
-          },
-        ),
+        child: Text.rich(TextSpan(children: [
+          TextSpan(text: "你好世界"),
+           TextSpan(
+                  text: "点我变色",
+                  style: TextStyle(
+                      fontSize: 30.0,
+                      color: _toggle ? Colors.blue : Colors.red
+                  ),
+                  recognizer: _tapGestureRecognizer
+                    ..onTap = () {
+                      setState(() {
+                        _toggle = !_toggle;
+                      });
+                    },
+                ),
+          TextSpan(text: "你好世界"),
+        ])),
       ),
     );
   }
