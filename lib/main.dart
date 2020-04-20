@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_tutorial/chapter.dart';
 import 'package:flutter_tutorial/chapter4/chapter4.dart';
 import 'package:flutter_tutorial/chapter5/chapter5.dart';
 import 'package:flutter_tutorial/chapter6/chapter6.dart';
@@ -8,8 +9,9 @@ import 'package:flutter_tutorial/chapter8/chapter8.1.dart';
 import 'package:flutter_tutorial/chapter8/chapter8.2.dart';
 import 'package:flutter_tutorial/chapter8/chapter8.3.dart';
 import 'package:flutter_tutorial/chapter8/chapter8.4.dart';
-
-import 'chapter8/chapter8.dart';
+import 'package:flutter_tutorial/chapter8/chapter8.dart';
+import 'package:flutter_tutorial/chapter9/chapter9.2.dart';
+import 'package:flutter_tutorial/chapter9/chapter9.dart';
 
 void main() => runApp(Test());
 
@@ -33,6 +35,8 @@ class Test extends StatelessWidget {
         'chapter8.2': (context) => Chapter82(),
         'chapter8.3': (context) => Chapter83(),
         'chapter8.4': (context) => Chapter84(),
+        'chapter9': (context) => Chapter9(),
+        'chapter9.2': (context) => Chapter92(),
       },
     );
   }
@@ -40,42 +44,35 @@ class Test extends StatelessWidget {
 
 // 主界面
 class HomeRoute extends StatelessWidget {
+  final List<Chapter> _chapters = [
+    Chapter('第四章：布局类组件', 'chapter4'),
+    Chapter('第五章：容器类组件', 'chapter5'),
+    Chapter('第六章：可滚动组件', 'chapter6'),
+    Chapter('第七章：功能型组件', 'chapter7'),
+    Chapter('第八章：事件处理与通知', 'chapter8'),
+    Chapter('第九章：动画', 'chapter9'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text('Flutter实战'),
         ),
-        body: ConstrainedBox(
-            constraints: BoxConstraints(minWidth: double.infinity),
-            child: Column(
-              children: <Widget>[
-                FlatButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'chapter4');
-                    },
-                    child: Text('第四章：布局类组件')),
-                FlatButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'chapter5');
-                    },
-                    child: Text('第五章：容器类组件')),
-                FlatButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'chapter6');
-                    },
-                    child: Text('第六章：可滚动组件')),
-                FlatButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'chapter7');
-                    },
-                    child: Text('第七章：功能型组件')),
-                FlatButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'chapter8');
-                    },
-                    child: Text('第八章 事件处理与通知')),
-              ],
-            )));
+        body: ListView.separated(
+          itemCount: _chapters.length,
+          itemBuilder: (BuildContext context, index) {
+            return ListTile(
+              title: Text(_chapters[index].title),
+              onTap: () {
+                Navigator.of(context).pushNamed(_chapters[index].route,
+                    arguments: _chapters[index].title);
+              },
+            );
+          },
+          separatorBuilder: (BuildContext context, int index) {
+            return Divider(height: 1,);
+          },
+        ));
   }
 }

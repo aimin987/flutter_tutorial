@@ -4,7 +4,7 @@
  * Description: 事件处理与通知
  * -----
  * Created  By: Aim 2020-04-19 10:28:33
- * Modified By: Aim 2020-04-20 13:42:32
+ * Modified By: Aim 2020-04-20 16:38:24
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -41,7 +41,7 @@ class Chapter8 extends StatelessWidget {
           );
         },
         separatorBuilder: (BuildContext context, int index) {
-          return Divider();
+          return Divider(height: 1,);
         },
       ),
     );
