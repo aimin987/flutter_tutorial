@@ -4,7 +4,7 @@
  * Description: 第九章：动画
  * -----
  * Created  By: Aim 2020-04-20 15:18:35
- * Modified By: Aim 2020-04-21 11:32:41
+ * Modified By: Aim 2020-04-21 15:55:12
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -26,6 +26,7 @@ class Chapter9 extends StatelessWidget {
     Chapter('9.3 自定义路由切换动画', 'chapter9.3'),
     Chapter('9.4 Hero动画', 'chapter9.4'),
     Chapter('9.5 交织动画', 'chapter9.5'),
+    Chapter('9.6 通用“动画切换”组件（AnimatedSwitcher）', 'chapter9.6'),
   ];
 
   @override
