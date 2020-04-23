@@ -4,7 +4,7 @@
  * Description: 第九章：动画
  * -----
  * Created  By: Aim 2020-04-20 15:18:35
- * Modified By: Aim 2020-04-21 15:55:12
+ * Modified By: Aim 2020-04-23 17:50:26
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -21,7 +21,7 @@ class Chapter9 extends StatelessWidget {
   //   '8.1：原始指针事件处理',
   // ];
 
-  final List<Chapter> _chapters = [
+  static List<Chapter> _chapters = [
     Chapter('9.2 动画基本结构及状态监听', 'chapter9.2'),
     Chapter('9.3 自定义路由切换动画', 'chapter9.3'),
     Chapter('9.4 Hero动画', 'chapter9.4'),

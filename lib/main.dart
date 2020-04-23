@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_tutorial/chapter.dart';
+import 'package:flutter_tutorial/chapter11/chapter11.1.dart';
+import 'package:flutter_tutorial/chapter11/chapter11.2.dart';
+import 'package:flutter_tutorial/chapter11/chapter11.dart';
 import 'package:flutter_tutorial/chapter4/chapter4.dart';
 import 'package:flutter_tutorial/chapter5/chapter5.dart';
 import 'package:flutter_tutorial/chapter6/chapter6.dart';
@@ -43,6 +45,9 @@ class Test extends StatelessWidget {
         'chapter9.4': (context) => Chapter94(),
         'chapter9.5': (context) => Chapter95(),
         'chapter9.6': (context) => Chapter96(),
+        'chapter11': (context) => Chapter11(),
+        'chapter11.1': (context) => Chapter111(),
+        'chapter11.2': (context) => Chapter112(),
       },
     );
   }
@@ -57,6 +62,7 @@ class HomeRoute extends StatelessWidget {
     Chapter('第七章：功能型组件', 'chapter7'),
     Chapter('第八章：事件处理与通知', 'chapter8'),
     Chapter('第九章：动画', 'chapter9'),
+    Chapter('第十一章：文件操作与网络请求', 'chapter11'),
   ];
 
   @override
