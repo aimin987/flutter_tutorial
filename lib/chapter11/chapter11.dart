@@ -4,7 +4,7 @@
  * Description: 
  * -----
  * Created  By: Aim 2020-04-23 17:44:41
- * Modified By: Aim 2020-04-23 17:54:26
+ * Modified By: Aim 2020-04-24 13:25:45
  * -----
  * HISTORY:
  * Date      	By	Comments
@@ -20,6 +20,7 @@ class Chapter11 extends StatelessWidget {
   static const _chapters = [
     Chapter('11.1 文件操作', 'chapter11.1'),
     Chapter('11.2 通过HttpClient发起HTTP请求', 'chapter11.2'),
+    Chapter('11.3 Http请求-Dio http库', 'chapter11.3'),
   ];
 
   @override

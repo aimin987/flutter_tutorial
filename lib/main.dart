@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/chapter.dart';
 import 'package:flutter_tutorial/chapter11/chapter11.1.dart';
 import 'package:flutter_tutorial/chapter11/chapter11.2.dart';
+import 'package:flutter_tutorial/chapter11/chapter11.3.dart';
 import 'package:flutter_tutorial/chapter11/chapter11.dart';
 import 'package:flutter_tutorial/chapter4/chapter4.dart';
 import 'package:flutter_tutorial/chapter5/chapter5.dart';
@@ -48,6 +49,7 @@ class Test extends StatelessWidget {
         'chapter11': (context) => Chapter11(),
         'chapter11.1': (context) => Chapter111(),
         'chapter11.2': (context) => Chapter112(),
+        'chapter11.3': (context) => Chapter113(),
       },
     );
   }
